@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+    /* max-height: 600px; */
+    /* padding-top: 20rem;
+    padding-bottom: 10rem; */
+}
+h1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+.display-container {
+  position: relative;
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+  border-radius: 1rem;
+  border-bottom: 0.35rem solid blueviolet;
+  margin: 1rem 0;
+  padding: 0.35rem;
+}
+.display{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+
+}
+.display::placeholder{
+    color: yellow;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 1.5rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-size: 1.5rem;
+
+}
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.input-container{
+    width: 100%;
+    background-image: linear-gradient(
+        to top,
+        #1e3c72 0%,
+        #1e3c72 1%,
+        #2a5298 100%
+      );
+    border-radius:1rem ;
+    padding: 2rem;
+    border-bottom: 0.35rem solid blueviolet;
+
+}
+.length-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.length-container p:nth-child(2){
+    color: yellow;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+.strength-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strength-container p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.indicator{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+
+}
+.generateBtn{
+    width: 100%;
+    padding: 1rem 0;
+    color: yellow;
+    background-color: blueviolet;
+    text-align: center;
+    border: none;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid yellow;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    outline: none;
+    
+
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+
+}
+.check input{
+    appearance: none; /* this property contradicts the default style given by browser*/
+    height: 20px;
+    width: 20px;
+    border: 1px solid cyan;
+    border-radius:0.35rem ;
+    cursor: pointer;
+    position: relative;
+}
+.check input:checked{
+    background-color: cyan;
+    
+}
+.check input:checked::after{
+    content: "✔";
+    position: absolute;
+    color: blue;
+    font-size: 1.05rem;
+    font-weight: 600;
+    bottom: -15%;
+    left: 3%;
+}
+.check label{
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color:blueviolet;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: blueviolet;
+
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px yellow;
+    
+}
+.slider:focus{
+    outline: 3px solid yellow;
+
+}
+.slider::-webkit-slider-thumb:hover{
+    background-color: black;
+    outline: 3px solid yellow;
+    box-shadow: 0px 0px 25px 0px yellow;
+}
+.display-container .copied-text{
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    color: yellow;
+    background-color: blueviolet;
+    border-radius:1.5rem ;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px;
+    right: 10%;
+    bottom: 100%;
+    scale: 0;
+    transition: all 0.3s ease-in-out;
+
+}
+
